@@ -39,6 +39,8 @@ const display = (users) => {
         tr.append(tdReviewer);
         let tdAdmin = $(`<td>${(user.isAdmin ? "&#10004;":"&#10006;")}</td>`);
         tr.append(tdAdmin);
+        let tdAction = $(`<td><a href="detail.html?id=${user.id}">Detail</a> | <a href="change.html?id=${user.id}">Edit</a></td>`);
+        tr.append(tdAction);
         tbody.append(tr); // puts the tr in the body (in the html)
     }
 }
